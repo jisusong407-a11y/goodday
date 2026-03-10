@@ -342,7 +342,13 @@ const BOT_TOKEN = "8643452913:AAH1X3a9Ynih-uu1VSE_ztYCdVkS3M5nzxs";
 const PERSONAL_CHAT_ID = "6824992799"; 
 const GROUP_CHAT_ID = "-1003873151962"; 
 
-const text = "🚨 텔레그램 테스트 알림\n개인방 + 단톡방 동시 테스트";
+const text = "🚨 const text = `📢 [유체퍼 신청 알림]
+
+🏢 소속: ${company}
+📡 통신사: ${carrier}
+📱 관심: ${product}
+
+⚠ 고객이 공식 접수페이지로 이동했습니다.`;
 
 // 개인방 보내기
 fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
@@ -369,6 +375,7 @@ fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
  
 </body>
 </html>
+
 
 
 
