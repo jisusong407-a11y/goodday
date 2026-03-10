@@ -338,26 +338,34 @@
             const product = formData.get('product');
  
             // Telegram Notification Config
-            const BOT_TOKEN = "8643452913:AAH1X3a9Ynih-uu1VSE_ztYCdVkS3M5nzxs";
-            const CHAT_ID = "6824992799";
-            // [수정] 텔레그램 메시지에 통신사 정보 추가
-            const text = `🚨 [유체페 신청 알림]\n🏢 소속: ${company}\n📶 통신사: ${carrier}\n📱 관심: ${product}\n\n⚠️ 고객이 공식 접수페이지로 이동했습니다. 카톡 문의를 확인해 주세요!`;
- 
-            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: CHAT_ID, text: text })
-            }).then(response => {
-                if (response.ok) console.log('Telegram Alert Sent');
-            }).catch(error => {
-                console.error('Error sending Telegram alert:', error);
-            });
+const BOT_TOKEN = "8643452913:AAH1X3a9Ynih-uu1VSE_ztYCdVkS3M5nzxs";
+const CHAT_ID = "6824992799"; // 먼저 개인방으로 테스트
+
+const text = `📢 [유체퍼 신청 알림]
+🏢 소속: ${company}
+📡 통신사: ${carrier}
+📱 관심: ${product}
+
+⚠ 고객이 공식 접수페이지로 이동했습니다.`;
+
+fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: CHAT_ID, text: text })
+})
+.then(response => {
+    if (response.ok) console.log('Telegram Alert Sent');
+})
+.catch(error => {
+    console.error('Error sending Telegram alert:', error);
+});
         });
     }
 </script>
  
 </body>
 </html>
+
 
 
 
