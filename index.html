@@ -240,6 +240,12 @@
        
         <form id="consultForm">
             <div class="form-group">
+                <div class="form-group">
+    <label>이름</label>
+    <input type="text" name="name" required
+           style="width:100%; padding:18px; border-radius:16px; border:2px solid #eee; font-size:1rem; background:#fafafa;">
+</div>
+
                 <label>소속 기업 선택</label>
                 <select name="company" required>
                     <option value="">회사를 선택하세요</option>
@@ -332,29 +338,54 @@
             btn.innerText = "새 창에서 접수 중입니다...";
             btn.disabled = true;
            
-            const formData = new FormData(this);
-            const company = formData.get('company');
-            const carrier = formData.get('carrier'); // [추가] 통신사 정보 가져오기
-            const product = formData.get('product');
- 
-           // Telegram Notification Config
-const BOT_TOKEN = "8643452913:AAH1X3a9Ynih-uu1VSE_ztYCdVkS3M5nzxs";
-const PERSONAL_CHAT_ID = "6824992799"; 
-const GROUP_CHAT_ID = "-1003873151962"; 
+           <div class="form-group">
+    <label>이름</label>
+    <input type="text" name="name" required
+           style="width:100%; padding:18px; border-radius:16px; border:2px solid #eee; font-size:1rem; background:#fafafa;">
+</div>
 
-const text = "🚨 텔레그램 테스트 알림\n개인방 + 단톡방 동시 테스트";
 
-// 개인방 보내기
-fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-        chat_id: PERSONAL_CHAT_ID,
-        text: text
-    })
-});
 
-// 단톡방 보내기
+
+
+
+
+
+
+
+
+const formData = new FormData(this);
+const name = formData.get('name');
+const company = formData.get('company');
+const carrier = formData.get('carrier');
+const product = formData.get('product');
+
+const now = new Date();
+const timeText =
+    String(now.getHours()).padStart(2, "0") + ":" +
+    String(now.getMinutes()).padStart(2, "0");
+
+const userAgent = navigator.userAgent;
+let deviceType = "PC";
+if (/android/i.test(userAgent)) deviceType = "Android";
+if (/iphone|ipad|ipod/i.test(userAgent)) deviceType = "iPhone";
+
+const BOT_TOKEN = "여기에_새_봇토큰_넣기";
+const GROUP_CHAT_ID = "-1003873151962";
+
+const text = `🚨 유체퍼 신규 신청
+
+👤 이름: ${name}
+🏢 소속: ${company}
+📡 통신사: ${carrier}
+📱 관심기기: ${product}
+
+📱 접속기기: ${deviceType}
+🌏 지역: 서울
+🕒 시간: ${timeText}
+
+🔔 접수페이지 이동`;
+
 fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -362,6 +393,12 @@ fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
         chat_id: GROUP_CHAT_ID,
         text: text
     })
+})
+.then(response => {
+    if (response.ok) console.log('Telegram Alert Sent');
+})
+.catch(error => {
+    console.error('Error sending Telegram alert:', error);
 });
         });
     }
@@ -369,6 +406,7 @@ fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
  
 </body>
 </html>
+
 
 
 
