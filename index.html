@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>군산산업단지 X 유플러스 | 유플러스 체인지 페스티벌</title>
-    <!-- Premium Font: Pretendard -->
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+
     <style>
         :root {
             --uplus-magenta: #E6007E;
@@ -16,8 +16,13 @@
             --white: #ffffff;
             --kids-blue: #4A90E2;
         }
- 
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; outline: none; }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+        }
+
         body {
             background-color: var(--white);
             color: var(--text-main);
@@ -26,130 +31,92 @@
             line-height: 1.6;
             word-break: keep-all;
         }
- /* Header Styling */
-.top-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e9e9e9;
-    padding: 14px 16px;
-}
 
-.header-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-}
+        /* Header Styling */
+        .top-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e9e9e9;
+            padding: 14px 16px;
+        }
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    min-width: 0;
-}
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
 
-.logo-text {
-    color: var(--uplus-magenta);
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    flex-shrink: 0;
-}
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 0;
+        }
 
-.header-line {
-    width: 1px;
-    height: 52px;
-    background: #dcdcdc;
-    flex-shrink: 0;
-}
+        .logo-text {
+            color: var(--uplus-magenta);
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            flex-shrink: 0;
+        }
 
-.header-copy {
-    min-width: 0;
-}
+        .header-line {
+            width: 1px;
+            height: 52px;
+            background: #dcdcdc;
+            flex-shrink: 0;
+        }
 
-.header-copy-top {
-    font-size: 0.95rem;
-    color: #7a7f8c;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 4px;
-}
+        .header-copy {
+            min-width: 0;
+        }
 
-.header-copy-bottom {
-    font-size: 1.6rem;
-    color: #1f2430;
-    font-weight: 900;
-    line-height: 1.2;
-    letter-spacing: -0.03em;
-    word-break: keep-all;
-}
+        .header-copy-top {
+            font-size: 0.95rem;
+            color: #7a7f8c;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
 
-.header-call-btn {
-    width: 64px;
-    height: 64px;
-    min-width: 64px;
-    border-radius: 50%;
-    background: var(--uplus-magenta);
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 10px 24px rgba(230, 0, 126, 0.22);
-    flex-shrink: 0;
-}
+        .header-copy-bottom {
+            font-size: 1.6rem;
+            color: #1f2430;
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            word-break: keep-all;
+        }
 
-.header-call-btn svg {
-    width: 28px;
-    height: 28px;
-    overflow: visible;
-}
+        .header-call-btn {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            border-radius: 50%;
+            background: var(--uplus-magenta);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 10px 24px rgba(230, 0, 126, 0.22);
+            flex-shrink: 0;
+        }
 
-/* Mobile */
-@media (max-width: 767px) {
-    .top-header {
-        padding: 12px 14px;
-    }
+        .header-call-btn svg {
+            width: 28px;
+            height: 28px;
+            overflow: visible;
+        }
 
-    .header-left {
-        gap: 10px;
-    }
-
-    .logo-text {
-        font-size: 1.75rem;
-    }
-
-    .header-line {
-        height: 42px;
-    }
-
-    .header-copy-top {
-        font-size: 0.8rem;
-        margin-bottom: 2px;
-    }
-
-    .header-copy-bottom {
-        font-size: 1.05rem;
-    }
-
-    .header-call-btn {
-        width: 52px;
-        height: 52px;
-        min-width: 52px;
-    }
-
-    .header-call-btn svg {
-        width: 23px;
-        height: 23px;
-    }
-}
- 
         /* Hero Section */
         .hero {
             padding: 72px 20px 80px;
@@ -157,6 +124,7 @@
             text-align: center;
             background-image: radial-gradient(circle at 10% 20%, rgba(255, 240, 246, 1) 0%, rgba(255, 255, 255, 1) 90%);
         }
+
         .hero .badge {
             background: #222;
             color: white;
@@ -167,72 +135,449 @@
             display: inline-block;
             margin-bottom: 30px;
         }
-        .hero h1 { margin: 0; line-height: 1.1; }
-        .sub-collab { display: block; font-size: 1.4rem; color: #555; margin-bottom: 15px; font-weight: 700; }
-        .uchepe-title { display: flex; flex-direction: column; align-items: center; gap: 5px; }
-        .word-row { display: flex; align-items: baseline; justify-content: center; gap: 2px; }
-        .point-char { font-size: 5rem; color: var(--uplus-magenta); font-weight: 900; }
-        .rest-char { font-size: 2.5rem; color: #222; font-weight: 800; }
- 
-        /* Timer Box */
-        .timer-box { display: inline-flex; gap: 12px; margin: 30px 0; }
-        .timer-unit { background: #fff; border: 2.5px solid var(--uplus-magenta); padding: 14px; border-radius: 18px; min-width: 75px; font-weight: 800; color: var(--uplus-magenta); box-shadow: 0 6px 20px rgba(230, 0, 126, 0.08); }
-        .timer-val { font-size: 1.8rem; line-height: 1; }
- 
+
+        .hero h1 {
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .sub-collab {
+            display: block;
+            font-size: 1.4rem;
+            color: #555;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .uchepe-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .word-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .point-char {
+            font-size: 5rem;
+            color: var(--uplus-magenta);
+            font-weight: 900;
+        }
+
+        .rest-char {
+            font-size: 2.5rem;
+            color: #222;
+            font-weight: 800;
+        }
+
+        /* Hero Consult Card */
+        .hero-consult-wrap {
+            margin-top: 36px;
+        }
+
+        .hero-consult-desc {
+            margin: 0 0 26px;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #6f6f76;
+            font-weight: 700;
+        }
+
+        .hero-consult-card {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 34px 24px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, #23253d 0%, #1e2136 100%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+            border: 1px solid rgba(255,255,255,0.45);
+            text-align: center;
+        }
+
+        .hero-consult-label {
+            margin: 0 0 10px;
+            color: var(--uplus-magenta);
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .hero-consult-role {
+            margin: 0 0 14px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            letter-spacing: 0.14em;
+            font-weight: 700;
+        }
+
+        .hero-consult-phone {
+            margin: 0 0 18px;
+            color: var(--uplus-magenta);
+            font-size: 2.8rem;
+            line-height: 1.1;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-consult-name {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: var(--uplus-magenta);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(230, 0, 126, 0.22);
+        }
+
         /* Container & Cards */
-        .container { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .benefit-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
-        .card { background: #fff; border-radius: 32px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); border: 1px solid #f5f5f5; text-align: center; }
-        .card-icon { width: 100%; height: 180px; margin-bottom: 25px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; position: relative; }
-        .card-icon img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
-        .coming-soon-overlay { position: absolute; color: white; font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
-        .price-tag { font-size: 2.2rem; font-weight: 900; color: var(--uplus-magenta); margin: 15px 0; }
-        .card ul { padding: 20px 0 0; list-style: none; border-top: 1px solid #f0f0f0; text-align: left; }
-        .card ul li { margin-bottom: 10px; font-weight: 500; }
-        .card ul li::before { content: '✓'; color: var(--uplus-magenta); margin-right: 10px; font-weight: bold; }
- 
+        .container {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 32px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid #f5f5f5;
+            text-align: center;
+        }
+
+        .card-icon {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            position: relative;
+        }
+
+        .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .coming-soon-overlay {
+            position: absolute;
+            color: white;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .price-tag {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--uplus-magenta);
+            margin: 15px 0;
+        }
+
+        .card ul {
+            padding: 20px 0 0;
+            list-style: none;
+            border-top: 1px solid #f0f0f0;
+            text-align: left;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .card ul li::before {
+            content: '✓';
+            color: var(--uplus-magenta);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
         /* Kids Phone Section */
-        .kids-section { background-color: #f0f9ff; padding: 60px 20px; border-radius: 40px; text-align: center; margin: 60px 0; }
-        .kids-offer-box { background: #fff; padding: 40px; border-radius: 30px; border: 2px solid #7ED321; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-        .kids-main-image img { width: 100%; border-radius: 20px; }
- 
-        /* Apply Section (Consulting) */
-        .apply-section { background: var(--bg-gray); padding: 80px 20px; border-radius: 60px 60px 0 0; }
-        .apply-box { max-width: 600px; margin: 0 auto; background: white; padding: 50px 40px; border-radius: 35px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); text-align: center; }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        label { display: block; margin-bottom: 8px; font-weight: 700; color: #333; }
-        select { width: 100%; padding: 18px; border-radius: 16px; border: 2px solid #eee; font-size: 1rem; background: #fafafa; }
-        .submit-btn { width: 100%; padding: 22px; background: var(--uplus-magenta); color: white; border: none; border-radius: 18px; font-size: 1.4rem; font-weight: 800; cursor: pointer; box-shadow: 0 12px 30px rgba(230, 0, 126, 0.3); transition: all 0.3s; }
-        .submit-btn:hover { transform: translateY(-3px); }
-        .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
- 
+        .kids-section {
+            background-color: #f0f9ff;
+            padding: 60px 20px;
+            border-radius: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .kids-content {
+            display: block;
+        }
+
+        .kids-offer-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            border: 2px solid #7ED321;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .kids-main-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Apply Section */
+        .apply-section {
+            background: var(--bg-gray);
+            padding: 80px 20px;
+            border-radius: 60px 60px 0 0;
+        }
+
+        .apply-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 40px;
+            border-radius: 35px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 18px;
+            border-radius: 16px;
+            border: 2px solid #eee;
+            font-size: 1rem;
+            background: #fafafa;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 22px;
+            background: var(--uplus-magenta);
+            color: white;
+            border: none;
+            border-radius: 18px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(230, 0, 126, 0.3);
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         /* Notice Box */
-        .notice-box { background: #FFF9E6; border: 2px dashed #FFB800; padding: 20px; border-radius: 20px; margin-top: 30px; text-align: left; }
-        .notice-box h4 { margin: 0 0 10px; color: #d48a00; }
-        .notice-box p { margin: 0; font-size: 0.95rem; font-weight: 600; color: #665200; line-height: 1.6; }
- 
+        .notice-box {
+            background: #FFF9E6;
+            border: 2px dashed #FFB800;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .notice-box h4 {
+            margin: 0 0 10px;
+            color: #d48a00;
+        }
+
+        .notice-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #665200;
+            line-height: 1.6;
+        }
+
         /* Floating Buttons */
-        .floating-action-group { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; width: 95%; max-width: 500px; z-index: 1001; }
-        .floating-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; border-radius: 40px; text-decoration: none; font-weight: 800; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: transform 0.2s; }
-        .floating-btn:active { transform: scale(0.95); }
-        .btn-kakao { background: #FEE500; color: #3c1e1e; }
-        .btn-call { background: var(--uplus-magenta); color: white; }
- 
-        footer { text-align: center; padding: 60px 20px 120px; color: #999; font-size: 0.9rem; }
- 
+        .floating-action-group {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            width: 95%;
+            max-width: 500px;
+            z-index: 1001;
+        }
+
+        .floating-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .floating-btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn-kakao {
+            background: #FEE500;
+            color: #3c1e1e;
+        }
+
+        .btn-call {
+            background: var(--uplus-magenta);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 120px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
         @media (min-width: 768px) {
-            .benefit-grid { grid-template-columns: 1fr 1fr; }
-            .kids-content { display: flex; gap: 30px; align-items: center; }
-            .kids-main-image, .kids-info-wrap { flex: 1; }
-            .point-char { font-size: 7rem; }
-            .rest-char { font-size: 3.5rem; }
+            .benefit-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .kids-content {
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+
+            .kids-main-image,
+            .kids-info-wrap {
+                flex: 1;
+            }
+
+            .point-char {
+                font-size: 7rem;
+            }
+
+            .rest-char {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .top-header {
+                padding: 12px 14px;
+            }
+
+            .header-left {
+                gap: 10px;
+            }
+
+            .logo-text {
+                font-size: 1.75rem;
+            }
+
+            .header-line {
+                height: 42px;
+            }
+
+            .header-copy-top {
+                font-size: 0.8rem;
+                margin-bottom: 2px;
+            }
+
+            .header-copy-bottom {
+                font-size: 1.05rem;
+            }
+
+            .header-call-btn {
+                width: 52px;
+                height: 52px;
+                min-width: 52px;
+            }
+
+            .header-call-btn svg {
+                width: 23px;
+                height: 23px;
+            }
+
+            .hero-consult-wrap {
+                margin-top: 28px;
+            }
+
+            .hero-consult-desc {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-consult-card {
+                padding: 26px 18px;
+                border-radius: 24px;
+            }
+
+            .hero-consult-label {
+                font-size: 1rem;
+            }
+
+            .hero-consult-role {
+                font-size: 0.85rem;
+                margin-bottom: 10px;
+            }
+
+            .hero-consult-phone {
+                font-size: 2.2rem;
+                margin-bottom: 14px;
+            }
+
+            .hero-consult-name {
+                padding: 10px 18px;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
- 
-header class="top-header">
+
+<header class="top-header">
     <div class="header-inner">
         <div class="header-left">
             <div class="logo-text">LGU+</div>
@@ -250,9 +595,10 @@ header class="top-header">
         </a>
     </div>
 </header>
- 
+
 <section class="hero">
     <div class="badge">OFFICIAL COLLABORATION</div>
+
     <h1>
         <span class="sub-collab">군산산업단지 X 유플러스 콜라보</span>
         <div class="uchepe-title">
@@ -261,26 +607,30 @@ header class="top-header">
             <div class="word-row"><span class="point-char">페</span><span class="rest-char">스티벌</span></div>
         </div>
     </h1>
-    <p style="color:var(--text-sub); margin:30px 0; font-size:1.2rem; font-weight:500;">오직 군산산업단지 임직원만을 위한 역대급 혜택의 서막</p>
-    <div class="timer-box">
-        <div class="timer-unit"><div class="timer-val" id="days">00</div><div style="font-size:0.7rem;">일</div></div>
-        <div class="timer-unit"><div class="timer-val" id="hours">00</div><div style="font-size:0.7rem;">시간</div></div>
-        <div class="timer-unit"><div class="timer-val" id="minutes">00</div><div style="font-size:0.7rem;">분</div></div>
-        <div class="timer-unit"><div class="timer-val" id="seconds">00</div><div style="font-size:0.7rem;">초</div></div>
+
+    <p style="color:var(--text-sub); margin:30px 0; font-size:1.2rem; font-weight:500;">
+        오직 군산산업단지 임직원만을 위한 역대급 혜택의 서막
+    </p>
+
+    <div class="hero-consult-wrap">
+        <p class="hero-consult-desc">쓰던 번호 그대로! 85요금제 기준 파격 할인 혜택 제공</p>
+
+        <div class="hero-consult-card">
+            <p class="hero-consult-label">실시간 가입 상담 및 단말기 문의</p>
+            <p class="hero-consult-role">CENTER MANAGER</p>
+            <p class="hero-consult-phone">010-8080-1290</p>
+            <div class="hero-consult-name">군산산단 전담팀</div>
+        </div>
     </div>
-    <p style="font-size: 1.1rem; color: var(--uplus-magenta); font-weight: 800;">🚀 3월 6일(금) 갤럭시 S26 정식 개통 D-Day</p>
 </section>
- <div style="text-align:center; padding:40px 20px;">
-   
-</div>
+
 <div class="container">
     <div class="section-title">
         <p style="color:var(--uplus-magenta); font-weight:800; margin-bottom:10px;">PREMIUM BENEFITS</p>
         <h2 style="font-size:2.2rem; font-weight:800;">유체페에서만 누리는 독점 혜택</h2>
     </div>
- 
+
     <div class="benefit-grid">
-        <!-- Galaxy S26 -->
         <div class="card">
             <div class="card-icon">
                 <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070" alt="갤럭시 S26 커밍순">
@@ -294,8 +644,7 @@ header class="top-header">
                 <li>갤럭시 보상패스: 24개월 후 50% 반납 보장</li>
             </ul>
         </div>
- 
-        <!-- Internet + TV -->
+
         <div class="card">
             <div class="card-icon">
                 <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=2070" alt="인터넷과 TV">
@@ -310,44 +659,61 @@ header class="top-header">
         </div>
     </div>
 
-    <!-- Kids Phone Special -->
     <div class="kids-section">
-        <div style="background:var(--kids-blue); color:white; padding:6px 20px; border-radius:30px; font-weight:bold; display:inline-block; margin-bottom:20px; font-size:0.9rem;">우리 아이 새학기 선물</div>
-       <div style="text-align:center; margin-bottom:20px;">
-    <img src="banner.png"
-         alt="유플러스 키즈폰 행사"
-         style="width:100%; max-width:320px; border-radius:18px;">
-</div>
-        <h2 style="font-size:2rem; font-weight:800; margin-bottom:40px;">U+ 무너에디션2 <span style="color:var(--uplus-magenta);">키즈폰 0원</span></h2>
-        <div style="text-align:center; padding:40px 20px;">
-   
+        <div style="background:var(--kids-blue); color:white; padding:6px 20px; border-radius:30px; font-weight:bold; display:inline-block; margin-bottom:20px; font-size:0.9rem;">
+            우리 아이 새학기 선물
+        </div>
+
+        <div style="text-align:center; margin-bottom:20px;">
+            <img src="banner.png" alt="유플러스 키즈폰 행사" style="width:100%; max-width:320px; border-radius:18px;">
+        </div>
+
+        <h2 style="font-size:2rem; font-weight:800; margin-bottom:40px;">
+            U+ 무너에디션2 <span style="color:var(--uplus-magenta);">키즈폰 0원</span>
+        </h2>
+
         <div class="kids-content">
             <div class="kids-main-image">
                 <img src="image_b3f2a6.jpg.png" alt="무너폰2 포스터" onerror="this.src='https://via.placeholder.com/500x600/ffffff/4a90e2?text=U%2B+Moona+Edition+2'">
             </div>
+
             <div class="kids-info-wrap">
                 <div class="kids-offer-box">
-                    <div style="background:var(--uplus-magenta); color:white; display:inline-block; padding:5px 15px; border-radius:10px; font-weight:bold; margin-bottom:15px;">🎁 유체페 특별 혜택</div>
-                    <div style="font-size:2.8rem; font-weight:900; color:var(--uplus-magenta); line-height:1.2;">기기 가격 0원</div>
-                    <p style="font-weight:800; color:#4A90E2; font-size:1.3rem; margin:10px 0 20px;">+ 6개월 요금 전액 지원!</p>
+                    <div style="background:var(--uplus-magenta); color:white; display:inline-block; padding:5px 15px; border-radius:10px; font-weight:bold; margin-bottom:15px;">
+                        🎁 유체페 특별 혜택
+                    </div>
+
+                    <div style="font-size:2.8rem; font-weight:900; color:var(--uplus-magenta); line-height:1.2;">
+                        기기 가격 0원
+                    </div>
+
+                    <p style="font-weight:800; color:#4A90E2; font-size:1.3rem; margin:10px 0 20px;">
+                        + 6개월 요금 전액 지원!
+                    </p>
+
                     <ul style="list-style:none; padding:0; margin:0;">
                         <li style="padding:8px 0; border-bottom:1px solid #f0f0f0;">✅ 액세서리 6종 패키지 풀세트</li>
                         <li style="padding:8px 0; border-bottom:1px solid #f0f0f0;">✅ 키즈케어 휴대폰 보험 1년</li>
                         <li style="padding:8px 0;">✅ 국·영·수 AI 교육팩 3개월</li>
                     </ul>
                 </div>
-                <p style="margin-top:20px; color:#666; font-size:0.95rem; font-weight:500;">※ 군산산업단지 임직원 가족 한정 VIP 전용 구성</p>
+
+                <p style="margin-top:20px; color:#666; font-size:0.95rem; font-weight:500;">
+                    ※ 군산산업단지 임직원 가족 한정 VIP 전용 구성
+                </p>
             </div>
         </div>
     </div>
 </div>
- 
-<!-- Consult Section (Integrated UCRM + Telegram) -->
+
 <div class="apply-section" id="apply">
     <div class="apply-box">
         <h2 style="margin:0 0 10px;">지금 바로 혜택 신청하기</h2>
-        <p style="color:#666; margin-bottom:40px; font-size:1.1rem;">소중한 개인정보 보호를 위해<br><strong>LG유플러스 공식 인증 시스템</strong>을 통해 접수됩니다.</p>
-       
+        <p style="color:#666; margin-bottom:40px; font-size:1.1rem;">
+            소중한 개인정보 보호를 위해<br>
+            <strong>LG유플러스 공식 인증 시스템</strong>을 통해 접수됩니다.
+        </p>
+
         <form id="consultForm">
             <div class="form-group">
                 <label>소속 기업 선택</label>
@@ -359,7 +725,7 @@ header class="top-header">
                     <option value="기타/협력사">기타/협력사</option>
                 </select>
             </div>
-            <!-- [추가] 통신사 선택 항목 -->
+
             <div class="form-group">
                 <label>현재 사용 중인 통신사</label>
                 <select name="carrier" required>
@@ -370,6 +736,7 @@ header class="top-header">
                     <option value="알뜰폰">알뜰폰</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label>상담 희망 품목</label>
                 <select name="product" required>
@@ -379,11 +746,12 @@ header class="top-header">
                     <option value="키즈폰">키즈폰 (무너폰2)</option>
                 </select>
             </div>
+
             <button type="submit" class="submit-btn" id="submitBtn">역대급 기회 신청하기 (공식)</button>
         </form>
- 
+
         <div class="notice-box">
-            <h4 style="margin:0 0 10px; color:#d48a00;">⚠️ 필독: 사은품 증정 안내</h4>
+            <h4>⚠️ 필독: 사은품 증정 안내</h4>
             <p>
                 위 버튼을 눌러 <strong>새창에서 접수를 완료</strong>하신 후,<br>
                 다시 돌아와 하단 <strong>[실시간 카톡 상담]</strong> 버튼을 눌러 <br>
@@ -393,65 +761,53 @@ header class="top-header">
         </div>
     </div>
 </div>
- 
+
 <footer>
     <p style="font-weight:800; color:#333; font-size:1.1rem; margin-bottom:15px;">LG유플러스 군산산업단지 페스티벌 전담팀</p>
-    <p>매장 위치: 군산시 궁포안2길 27, LG유플러스 </p>
+    <p>매장 위치: 군산시 궁포안2길 27, LG유플러스</p>
     <p>담당자 연락처: 010-8080-1290</p>
     <p style="margin-top:30px;">&copy; 2026 LG Uplus Corp. All Rights Reserved.</p>
 </footer>
- 
-<!-- Floating Action Group -->
+
 <div class="floating-action-group">
     <a href="http://pf.kakao.com/_WdxaxcK/chat" class="floating-btn btn-kakao">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.134-9 7 0 2.474 1.656 4.632 4.116 5.864l-.946 3.473c-.053.195.168.358.326.248l4.137-2.88c.441.063.896.095 1.367.095 4.97 0 9-3.134 9-7s-4.03-7-9-7z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3c-4.97 0-9 3.134-9 7 0 2.474 1.656 4.632 4.116 5.864l-.946 3.473c-.053.195.168.358.326.248l4.137-2.88c.441.063.896.095 1.367.095 4.97 0 9-3.134 9-7s-4.03-7-9-7z"/>
+        </svg>
         실시간 카톡 상담
     </a>
+
     <a href="tel:01080801290" class="floating-btn btn-call">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
         전화 상담하기
     </a>
 </div>
- 
+
 <script>
-    // 1. Countdown Timer (Target: March 6, 2026)
-    const targetDate = new Date("March 6, 2026 00:00:00").getTime();
-    setInterval(() => {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
-        if (diff <= 0) return;
-        document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-        document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
-    }, 1000);
- 
-    // 2. Submit Logic: Telegram Alert + UCRM New Window
     const consultForm = document.getElementById('consultForm');
+
     if (consultForm) {
         consultForm.addEventListener('submit', function(e) {
             e.preventDefault();
-           
+
             const ucrmUrl = "https://ucrm.lguplus.co.kr/mbl/v2/rcmd/moveInfo?param=cHBzbTc2ODYmMjAyNjAyMTIxNDI4NTk=";
-           
-            // Open UCRM in a new tab immediately
             window.open(ucrmUrl, '_blank');
-           
-            // Visual feedback
+
             const btn = document.getElementById('submitBtn');
             btn.innerText = "새 창에서 접수 중입니다...";
             btn.disabled = true;
-           
-         const formData = new FormData(this);
-const company = formData.get('company');
-const carrier = formData.get('carrier');
-const product = formData.get('product');
 
-// Telegram Notification Config
-const BOT_TOKEN = "8643452913:AAH1X3a9Ynih-uu1VSE_ztYCdVkS3M5nzxs";
-const CHAT_ID = "-1003873151962";
+            const formData = new FormData(this);
+            const company = formData.get('company');
+            const carrier = formData.get('carrier');
+            const product = formData.get('product');
 
-const text = `📢 [유체퍼 신청 알림]
+            const BOT_TOKEN = "8643452913:AAH1X3a9Ynih-uu1VSE_ztYCdVkS3M5nzxs";
+            const CHAT_ID = "-1003873151962";
+
+            const text = `📢 [유체퍼 신청 알림]
 
 🏢 소속: ${company}
 📡 통신사: ${carrier}
@@ -459,32 +815,28 @@ const text = `📢 [유체퍼 신청 알림]
 
 ⚠ 고객이 공식 접수페이지로 이동했습니다. 카톡 문의를 확인해주세요!`;
 
-fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: text
-    })
-})
-.then(response => {
-    if (response.ok) console.log("Telegram Alert Sent");
-})
-.catch(error => {
-    console.error("Telegram Error:", error);
-});
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: text
+                })
+            })
+            .then(response => {
+                if (response.ok) console.log("Telegram Alert Sent");
+            })
+            .catch(error => {
+                console.error("Telegram Error:", error);
+            });
         });
     }
 </script>
- 
+
 </body>
 </html>
-
-
-
-
 
 
 
