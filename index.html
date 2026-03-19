@@ -605,6 +605,67 @@
                 font-size: 1rem;
             }
         }
+        .kids-benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #e8edf3;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.kids-benefit-item {
+    text-align: center;
+    padding: 28px 14px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kids-benefit-item:nth-child(1),
+.kids-benefit-item:nth-child(2) {
+    border-bottom: 1px solid #edf1f5;
+}
+
+.kids-benefit-item:nth-child(1),
+.kids-benefit-item:nth-child(3) {
+    border-right: 1px solid #edf1f5;
+}
+
+.kids-benefit-item strong {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: var(--uplus-magenta);
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+}
+
+.kids-benefit-item span {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #7c8699;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .kids-benefit-item {
+        min-height: 170px;
+        padding: 36px 18px;
+    }
+
+    .kids-benefit-item strong {
+        font-size: 2.2rem;
+    }
+
+    .kids-benefit-item span {
+        font-size: 1.15rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -737,25 +798,26 @@
             </div>
 
             <div class="kids-info-wrap">
-                <div class="kids-offer-box">
-                    <div style="background:var(--uplus-magenta); color:white; display:inline-block; padding:5px 15px; border-radius:10px; font-weight:bold; margin-bottom:15px;">
-                        🎁 유체페 특별 혜택
-                    </div>
-
-                    <div style="font-size:2.8rem; font-weight:900; color:var(--uplus-magenta); line-height:1.2;">
-                        기기 가격 0원
-                    </div>
-
-                    <p style="font-weight:800; color:#4A90E2; font-size:1.3rem; margin:10px 0 20px;">
-                        + 6개월 요금 전액 지원!
-                    </p>
-
-                    <ul style="list-style:none; padding:0; margin:0;">
-                        <li style="padding:8px 0; border-bottom:1px solid #f0f0f0;">✅ 액세서리 6종 패키지 풀세트</li>
-                        <li style="padding:8px 0; border-bottom:1px solid #f0f0f0;">✅ 키즈케어 휴대폰 보험 1년</li>
-                        <li style="padding:8px 0;">✅ 국·영·수 AI 교육팩 3개월</li>
-                    </ul>
-                </div>
+               <div class="kids-offer-box">
+    <div class="kids-benefit-grid">
+        <div class="kids-benefit-item">
+            <strong>최대 80만원</strong>
+            <span>가구당 최대 할인액</span>
+        </div>
+        <div class="kids-benefit-item">
+            <strong>100% 적용</strong>
+            <span>임직원 가족 동일 혜택</span>
+        </div>
+        <div class="kids-benefit-item">
+            <strong>현금 지급</strong>
+            <span>유심 변경 시 20만원</span>
+        </div>
+        <div class="kids-benefit-item">
+            <strong>TV 증정</strong>
+            <span>인터넷+TV 결합 시</span>
+        </div>
+    </div>
+</div>
 
                 <p style="margin-top:20px; color:#666; font-size:0.95rem; font-weight:500;">
                     ※ 군산산업단지 임직원 가족 한정 VIP 전용 구성
