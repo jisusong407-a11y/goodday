@@ -6,873 +6,970 @@
     <title>군산산업단지 X 유플러스 | 유플러스 체인지 페스티벌</title>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
-    <style>
-        :root {
-            --uplus-magenta: #E6007E;
-            --uplus-light-pink: #FFF6FA;
-            --text-main: #222222;
-            --text-sub: #666666;
-            --bg-gray: #F8F9FA;
-            --white: #ffffff;
-            --kids-blue: #4A90E2;
-            --navy: #0b1437;
+   <style>
+    :root {
+        --uplus-magenta: #E6007E;
+        --uplus-light-pink: #FFF6FA;
+        --text-main: #222222;
+        --text-sub: #666666;
+        --bg-gray: #F8F9FA;
+        --white: #ffffff;
+        --kids-blue: #4A90E2;
+        --navy: #0b1437;
+    }
+
+    * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--white);
+        color: var(--text-main);
+        font-family: 'Pretendard', sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        word-break: keep-all;
+    }
+
+    .top-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255,255,255,0.96);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e9e9e9;
+        padding: 14px 16px;
+    }
+
+    .header-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+    }
+
+    .logo-text {
+        color: var(--uplus-magenta);
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        flex-shrink: 0;
+    }
+
+    .header-line {
+        width: 1px;
+        height: 52px;
+        background: #dcdcdc;
+        flex-shrink: 0;
+    }
+
+    .header-copy {
+        min-width: 0;
+    }
+
+    .header-copy-top {
+        font-size: 0.95rem;
+        color: #7a7f8c;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+
+    .header-copy-bottom {
+        font-size: 1.6rem;
+        color: #1f2430;
+        font-weight: 900;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        word-break: keep-all;
+    }
+
+    .header-call-btn {
+        width: 64px;
+        height: 64px;
+        min-width: 64px;
+        border-radius: 50%;
+        background: var(--uplus-magenta);
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 10px 24px rgba(230, 0, 126, 0.22);
+        flex-shrink: 0;
+    }
+
+    .header-call-btn svg {
+        width: 28px;
+        height: 28px;
+        overflow: visible;
+    }
+
+    .hero {
+        padding: 44px 20px 72px;
+        background:
+            radial-gradient(circle at top center, rgba(230, 0, 126, 0.10), transparent 32%),
+            linear-gradient(180deg, #fff8fc 0%, #fffdfd 100%);
+        text-align: center;
+    }
+
+    .hero-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .event-pill {
+        display: inline-block;
+        margin-bottom: 26px;
+        padding: 12px 24px;
+        border-radius: 999px;
+        background: var(--uplus-magenta);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1.3;
+        box-shadow: 0 10px 24px rgba(230, 0, 126, 0.18);
+    }
+
+    .hero h1 {
+        margin: 0;
+        line-height: 1.1;
+    }
+
+    .sub-collab {
+        display: block;
+        font-size: 1.4rem;
+        color: #666;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+
+    .uchepe-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .word-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .point-char {
+        font-size: 5.2rem;
+        color: var(--uplus-magenta);
+        font-weight: 900;
+        line-height: 1;
+    }
+
+    .rest-char {
+        font-size: 2.7rem;
+        color: #222;
+        font-weight: 900;
+        line-height: 1;
+    }
+
+    .hero-subtext {
+        color: var(--text-sub);
+        margin: 34px auto 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        max-width: 760px;
+    }
+
+    .hero-consult-wrap {
+        margin-top: 36px;
+    }
+
+    .hero-consult-desc {
+        margin: 0 0 26px;
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #6f6f76;
+        font-weight: 700;
+    }
+
+    .hero-consult-card {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 34px 24px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, #23253d 0%, #1e2136 100%);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+        border: 1px solid rgba(255,255,255,0.45);
+        text-align: center;
+    }
+
+    .hero-consult-label {
+        margin: 0 0 10px;
+        color: var(--uplus-magenta);
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+
+    .hero-consult-role {
+        margin: 0 0 14px;
+        color: rgba(255,255,255,0.7);
+        font-size: 0.95rem;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+    }
+
+    .hero-consult-phone {
+        margin: 0 0 18px;
+        color: #fff;
+        font-size: 2.8rem;
+        line-height: 1.1;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+    }
+
+    .hero-consult-name {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: var(--uplus-magenta);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 800;
+        box-shadow: 0 8px 20px rgba(230, 0, 126, 0.22);
+    }
+
+    .container {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .benefit-notice {
+        margin: 18px auto 0;
+        display: inline-block;
+        padding: 14px 26px;
+        border-radius: 999px;
+        background: #fff0f6;
+        color: var(--uplus-magenta);
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1.4;
+        border: 1px solid #ffd4e8;
+    }
+
+    .promo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .promo-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 28px;
+        padding: 18px 14px 20px;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .promo-card h3 {
+        margin: 0 0 14px;
+        font-size: 1.9rem;
+        line-height: 1.25;
+        font-weight: 900;
+        color: #111827;
+        letter-spacing: -0.03em;
+    }
+
+    .promo-image {
+        height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .promo-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .promo-price {
+        margin: 0 0 2px;
+        font-size: 1.05rem;
+        color: #98a2b3;
+        font-weight: 700;
+        text-decoration: line-through;
+    }
+
+    .promo-sale {
+        margin: 0;
+        font-size: 1.2rem;
+        color: var(--uplus-magenta);
+        font-weight: 900;
+    }
+
+    .promo-card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100%;
+    }
+
+    .promo-card-text h3 {
+        font-size: 2.1rem;
+        margin-bottom: 24px;
+    }
+
+    .promo-text-box p {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+        color: #111;
+        font-weight: 800;
+        line-height: 1.45;
+    }
+
+    .promo-text-box p:last-child {
+        margin-bottom: 0;
+    }
+
+    .kids-benefit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #fff;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid #e8edf3;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .kids-benefit-item {
+        text-align: center;
+        padding: 28px 14px;
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .kids-benefit-item:nth-child(1),
+    .kids-benefit-item:nth-child(2) {
+        border-bottom: 1px solid #edf1f5;
+    }
+
+    .kids-benefit-item:nth-child(1),
+    .kids-benefit-item:nth-child(3) {
+        border-right: 1px solid #edf1f5;
+    }
+
+    .kids-benefit-item strong {
+        display: block;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: var(--uplus-magenta);
+        font-weight: 900;
+        margin-bottom: 8px;
+        letter-spacing: -0.03em;
+    }
+
+    .kids-benefit-item span {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.45;
+        color: #7c8699;
+        font-weight: 700;
+    }
+
+    .benefit-extra-section {
+        margin-top: 20px;
+    }
+
+    .benefit-extra-title {
+        text-align: center;
+        font-size: 2.1rem;
+        font-weight: 900;
+        color: #111a2c;
+        margin: 0 0 20px;
+        letter-spacing: -0.03em;
+    }
+
+    .benefit-extra-desc {
+        text-align: center;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #7b8798;
+        margin: 0 0 26px;
+    }
+
+    .benefit-card {
+        border-radius: 34px;
+        padding: 34px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .benefit-card-light {
+        background: #fff;
+        border-top: 10px solid var(--uplus-magenta);
+    }
+
+    .benefit-card-pink {
+        background: #fff1f7;
+        border: 1px solid #ffd7ea;
+    }
+
+    .benefit-icon-box {
+        width: 128px;
+        height: 128px;
+        min-width: 128px;
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(230, 0, 126, 0.08);
+    }
+
+    .benefit-icon-box svg {
+        width: 58px;
+        height: 58px;
+    }
+
+    .benefit-text {
+        flex: 1;
+    }
+
+    .benefit-label {
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 900;
+        color: var(--uplus-magenta);
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+    }
+
+    .benefit-heading {
+        font-size: 2rem;
+        line-height: 1.3;
+        font-weight: 900;
+        color: #111a2c;
+        margin: 0 0 16px;
+        letter-spacing: -0.03em;
+    }
+
+    .benefit-desc {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: #5f6b7d;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .benefit-desc strong {
+        color: var(--uplus-magenta);
+        font-weight: 900;
+    }
+
+    .benefit-note {
+        display: block;
+        margin-top: 8px;
+        color: #5f6b7d;
+        font-weight: 700;
+    }
+
+    .apply-section {
+        background: var(--bg-gray);
+        padding: 80px 20px;
+        border-radius: 60px 60px 0 0;
+    }
+
+    .apply-box {
+        max-width: 760px;
+        margin: 0 auto;
+        background: white;
+        padding: 50px 40px;
+        border-radius: 35px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    select,
+    input[type="text"],
+    input[type="tel"] {
+        width: 100%;
+        padding: 18px;
+        border-radius: 16px;
+        border: 2px solid #eee;
+        font-size: 1rem;
+        background: #fafafa;
+        font-family: 'Pretendard', sans-serif;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 22px;
+        background: var(--uplus-magenta);
+        color: white;
+        border: none;
+        border-radius: 18px;
+        font-size: 1.4rem;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 12px 30px rgba(230, 0, 126, 0.3);
+        transition: all 0.3s;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-3px);
+    }
+
+    .submit-btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .notice-box {
+        background: #FFF9E6;
+        border: 2px dashed #FFB800;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .notice-box h4 {
+        margin: 0 0 10px;
+        color: #d48a00;
+    }
+
+    .notice-box p {
+        margin: 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #665200;
+        line-height: 1.6;
+    }
+
+    .faq-section {
+        padding: 80px 20px;
+        background: #f7f9fc;
+    }
+
+    .faq-wrap {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .faq-title {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: #111a2c;
+        margin: 0 0 40px;
+        letter-spacing: -0.03em;
+    }
+
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .faq-item {
+        background: #fff;
+        border: 1px solid #e7ebf0;
+        border-radius: 26px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .faq-question {
+        width: 100%;
+        background: #fff;
+        border: none;
+        padding: 28px 26px;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #1a2238;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        cursor: pointer;
+        font-family: 'Pretendard', sans-serif;
+    }
+
+    .faq-question span {
+        flex: 1;
+        padding-right: 16px;
+    }
+
+    .faq-icon {
+        font-size: 1.8rem;
+        line-height: 1;
+        color: #1a2238;
+        transition: transform 0.2s ease;
+    }
+
+    .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 0 26px 26px;
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #667085;
+        font-weight: 600;
+    }
+
+    .faq-item.active .faq-answer {
+        display: block;
+    }
+
+    .floating-action-group {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        width: 95%;
+        max-width: 500px;
+        z-index: 1001;
+    }
+
+    .floating-btn {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 16px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 0.95rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        transition: transform 0.2s;
+    }
+
+    .floating-btn:active {
+        transform: scale(0.95);
+    }
+
+    .btn-kakao {
+        background: #FEE500;
+        color: #3c1e1e;
+    }
+
+    .btn-call {
+        background: var(--uplus-magenta);
+        color: white;
+    }
+
+    footer {
+        text-align: center;
+        padding: 60px 20px 120px;
+        color: #999;
+        font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+        .kids-benefit-item {
+            min-height: 170px;
+            padding: 36px 18px;
         }
 
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-            outline: none;
+        .kids-benefit-item strong {
+            font-size: 2.2rem;
         }
 
-        html {
-            scroll-behavior: smooth;
+        .kids-benefit-item span {
+            font-size: 1.15rem;
         }
+    }
 
-        body {
-            background-color: var(--white);
-            color: var(--text-main);
-            font-family: 'Pretendard', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            word-break: keep-all;
-        }
-
+    @media (max-width: 767px) {
         .top-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e9e9e9;
-            padding: 14px 16px;
-        }
-
-        .header-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
+            padding: 12px 14px;
         }
 
         .header-left {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            min-width: 0;
+            gap: 10px;
         }
 
         .logo-text {
-            color: var(--uplus-magenta);
-            font-size: 2rem;
-            font-weight: 900;
-            line-height: 1;
-            letter-spacing: -0.03em;
-            flex-shrink: 0;
+            font-size: 1.75rem;
         }
 
         .header-line {
-            width: 1px;
-            height: 52px;
-            background: #dcdcdc;
-            flex-shrink: 0;
-        }
-
-        .header-copy {
-            min-width: 0;
+            height: 42px;
         }
 
         .header-copy-top {
-            font-size: 0.95rem;
-            color: #7a7f8c;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 2px;
         }
 
         .header-copy-bottom {
-            font-size: 1.6rem;
-            color: #1f2430;
-            font-weight: 900;
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-            word-break: keep-all;
+            font-size: 1.05rem;
         }
 
         .header-call-btn {
-            width: 64px;
-            height: 64px;
-            min-width: 64px;
-            border-radius: 50%;
-            background: var(--uplus-magenta);
-            color: #fff;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 10px 24px rgba(230, 0, 126, 0.22);
-            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
         }
 
         .header-call-btn svg {
-            width: 28px;
-            height: 28px;
-            overflow: visible;
+            width: 23px;
+            height: 23px;
         }
 
         .hero {
-            padding: 44px 20px 72px;
-            background:
-                radial-gradient(circle at top center, rgba(230, 0, 126, 0.10), transparent 32%),
-                linear-gradient(180deg, #fff8fc 0%, #fffdfd 100%);
-            text-align: center;
-        }
-
-        .hero-inner {
-            max-width: 1100px;
-            margin: 0 auto;
+            padding: 32px 16px 56px;
         }
 
         .event-pill {
-            display: inline-block;
-            margin-bottom: 26px;
-            padding: 12px 24px;
-            border-radius: 999px;
-            background: var(--uplus-magenta);
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 800;
-            line-height: 1.3;
-            box-shadow: 0 10px 24px rgba(230, 0, 126, 0.18);
-        }
-
-        .hero h1 {
-            margin: 0;
-            line-height: 1.1;
+            font-size: 0.9rem;
+            padding: 10px 18px;
+            margin-bottom: 22px;
         }
 
         .sub-collab {
-            display: block;
-            font-size: 1.4rem;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .uchepe-title {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .word-row {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            gap: 2px;
-        }
-
-        .point-char {
-            font-size: 5.2rem;
-            color: var(--uplus-magenta);
-            font-weight: 900;
-            line-height: 1;
-        }
-
-        .rest-char {
-            font-size: 2.7rem;
-            color: #222;
-            font-weight: 900;
-            line-height: 1;
-        }
-
-        .hero-subtext {
-            color: var(--text-sub);
-            margin: 34px auto 0;
-            font-size: 1.25rem;
-            font-weight: 600;
-            max-width: 760px;
-        }
-
-        .hero-consult-wrap {
-            margin-top: 36px;
-        }
-
-        .hero-consult-desc {
-            margin: 0 0 24px;
-            font-size: 1.15rem;
-            line-height: 1.6;
-            color: #6f6f76;
-            font-weight: 800;
-        }
-
-        .hero-consult-card {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 34px 24px;
-            border-radius: 30px;
-            background: linear-gradient(180deg, #23253d 0%, #1a1f3e 100%);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-            border: 1px solid rgba(255,255,255,0.12);
-            text-align: center;
-        }
-
-        .hero-consult-label {
-            margin: 0 0 10px;
-            color: var(--uplus-magenta);
-            font-size: 1.2rem;
-            font-weight: 800;
-        }
-
-        .hero-consult-role {
-            margin: 0 0 14px;
-            color: rgba(255,255,255,0.7);
-            font-size: 0.95rem;
-            letter-spacing: 0.14em;
-            font-weight: 700;
-        }
-
-        .hero-consult-phone {
-            margin: 0 0 18px;
-            color: #fff;
-            font-size: 2.8rem;
-            line-height: 1.1;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-        }
-
-        .hero-consult-name {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 22px;
-            border-radius: 999px;
-            background: var(--uplus-magenta);
-            color: #fff;
             font-size: 1rem;
-            font-weight: 800;
-            box-shadow: 0 8px 20px rgba(230, 0, 126, 0.22);
-        }
-
-        .container {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 34px;
-        }
-
-        .section-title p {
-            color: var(--uplus-magenta);
-            font-weight: 800;
-            margin: 0 0 12px;
-            font-size: 1rem;
-            letter-spacing: 0;
-        }
-
-        .section-title h2 {
-            font-size: 2.4rem;
-            font-weight: 900;
-            line-height: 1.3;
-            margin: 0;
-            color: #111;
-        }
-
-        .price-guide {
-            max-width: 720px;
-            margin: 0 auto 30px;
-            padding: 14px 20px;
-            border-radius: 999px;
-            background: #fff0f6;
-            color: var(--uplus-magenta);
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 800;
-            border: 1px solid #ffd1e9;
-        }
-
-        .promo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 30px;
-        }
-
-        .promo-card {
-            background: #fff;
-            border: 1px solid #e9edf3;
-            border-radius: 26px;
-            padding: 20px 14px 22px;
-            text-align: center;
-            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
-        }
-
-        .promo-card h3 {
-            margin: 0 0 14px;
-            font-size: 1.7rem;
-            line-height: 1.25;
-            font-weight: 900;
-            color: #111827;
-            letter-spacing: -0.03em;
-        }
-
-        .promo-image {
-            height: 210px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 16px;
         }
 
-        .promo-image img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            display: block;
+        .point-char {
+            font-size: 4rem;
+        }
+
+        .rest-char {
+            font-size: 2.2rem;
+        }
+
+        .hero-subtext {
+            font-size: 1rem;
+            margin-top: 26px;
+        }
+
+        .hero-consult-wrap {
+            margin-top: 28px;
+        }
+
+        .hero-consult-desc {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-consult-card {
+            padding: 26px 18px;
+            border-radius: 24px;
+        }
+
+        .hero-consult-label {
+            font-size: 1rem;
+        }
+
+        .hero-consult-role {
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-consult-phone {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+        }
+
+        .hero-consult-name {
+            padding: 10px 18px;
+            font-size: 0.95rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem !important;
+            line-height: 1.35;
+        }
+
+        .benefit-notice {
+            width: 100%;
+            font-size: 0.92rem;
+            padding: 12px 16px;
+            border-radius: 18px;
+        }
+
+        .promo-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .promo-card {
+            padding: 18px 12px 20px;
+            border-radius: 24px;
+        }
+
+        .promo-card h3 {
+            font-size: 1.55rem;
+            margin-bottom: 10px;
+        }
+
+        .promo-image {
+            height: 110px;
+            margin-bottom: 12px;
         }
 
         .promo-price {
-            margin: 0 0 6px;
-            font-size: 1rem;
-            color: #98a0af;
-            font-weight: 800;
-            text-decoration: line-through;
+            font-size: 0.82rem;
+            margin-bottom: 6px;
         }
 
         .promo-sale {
-            margin: 0;
-            font-size: 1.35rem;
-            color: var(--uplus-magenta);
-            font-weight: 900;
-        }
-
-        .promo-card-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 100%;
+            font-size: 1rem;
         }
 
         .promo-card-text h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 1.4rem;
+            margin-bottom: 14px;
         }
 
         .promo-text-box p {
-            margin: 0 0 10px;
-            font-size: 1.05rem;
-            color: #111;
-            font-weight: 800;
-            line-height: 1.5;
-        }
-
-        .promo-text-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        .extra-benefits-section {
-            margin-top: 34px;
-            margin-bottom: 10px;
-            padding: 0;
-        }
-
-        .extra-benefits-head {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .extra-benefits-title {
-            margin: 0 0 10px;
-            color: #10193f;
-            font-size: 2.2rem;
-            line-height: 1.15;
-            font-weight: 900;
-            font-style: italic;
-            letter-spacing: -0.02em;
-        }
-
-        .extra-benefits-sub {
-            margin: 0;
-            color: #7c8699;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .extra-benefit-card {
-            display: flex;
-            gap: 22px;
-            align-items: flex-start;
-            background: #fff;
-            border-radius: 30px;
-            padding: 28px 24px;
-            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-            border: 1px solid #eef2f7;
-            margin-bottom: 18px;
-        }
-
-        .extra-benefit-card.dark {
-            background: linear-gradient(180deg, #0d143a 0%, #0a1130 100%);
-            border: none;
-        }
-
-        .extra-benefit-icon {
-            width: 116px;
-            height: 116px;
-            min-width: 116px;
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f8e8f1;
-            color: var(--uplus-magenta);
-        }
-
-        .extra-benefit-card.dark .extra-benefit-icon {
-            background: rgba(255,255,255,0.08);
-            color: #fff;
-        }
-
-        .extra-benefit-icon svg {
-            width: 54px;
-            height: 54px;
-        }
-
-        .extra-benefit-label {
-            color: var(--uplus-magenta);
-            font-size: 1.1rem;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-            margin-bottom: 10px;
-        }
-
-        .extra-benefit-card h3 {
-            margin: 0 0 14px;
-            font-size: 2.2rem;
-            line-height: 1.28;
-            color: #10193f;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-        }
-
-        .extra-benefit-card p {
-            margin: 0;
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: #4f5b70;
-            font-weight: 700;
-        }
-
-        .extra-benefit-card .highlight {
-            color: var(--uplus-magenta);
-            font-weight: 900;
-        }
-
-        .extra-benefit-card.dark h3,
-        .extra-benefit-card.dark p {
-            color: #fff;
-        }
-
-        .apply-section {
-            background: var(--bg-gray);
-            padding: 80px 20px;
-            border-radius: 60px 60px 0 0;
-            margin-top: 60px;
-        }
-
-        .apply-box {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px 40px;
-            border-radius: 35px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: #333;
-        }
-
-        select {
-            width: 100%;
-            padding: 18px;
-            border-radius: 16px;
-            border: 2px solid #eee;
-            font-size: 1rem;
-            background: #fafafa;
-        }
-        input[type="text"],
-input[type="tel"] {
-    width: 100%;
-    padding: 18px;
-    border-radius: 16px;
-    border: 2px solid #eee;
-    font-size: 1rem;
-    background: #fafafa;
-    font-family: 'Pretendard', sans-serif;
-}
-
-              .submit-btn {
-            width: 100%;
-            padding: 22px;
-            background: var(--uplus-magenta);
-            color: white;
-            border: none;
-            border-radius: 18px;
-            font-size: 1.4rem;
-            font-weight: 800;
-            cursor: pointer;
-            box-shadow: 0 12px 30px rgba(230, 0, 126, 0.3);
-            transition: all 0.3s;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .submit-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .notice-box {
-            background: #FFF9E6;
-            border: 2px dashed #FFB800;
-            padding: 20px;
-            border-radius: 20px;
-            margin-top: 30px;
-            text-align: left;
-        }
-
-        .notice-box h4 {
-            margin: 0 0 10px;
-            color: #d48a00;
-        }
-
-        .notice-box p {
-            margin: 0;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #665200;
-            line-height: 1.6;
-        }
-
-        .floating-action-group {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            width: 95%;
-            max-width: 500px;
-            z-index: 1001;
-        }
-
-        .floating-btn {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 16px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.95rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            transition: transform 0.2s;
-        }
-
-        .floating-btn:active {
-            transform: scale(0.95);
-        }
-
-        .btn-kakao {
-            background: #FEE500;
-            color: #3c1e1e;
-        }
-
-        .btn-call {
-            background: var(--uplus-magenta);
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px 120px;
-            color: #999;
             font-size: 0.9rem;
         }
 
-        @media (min-width: 768px) {
-            .point-char {
-                font-size: 7rem;
-            }
-
-            .rest-char {
-                font-size: 3.6rem;
-            }
+        .kids-benefit-item {
+            min-height: 120px;
+            padding: 22px 10px;
         }
 
-        @media (max-width: 767px) {
-            .top-header {
-                padding: 12px 14px;
-            }
-
-            .header-left {
-                gap: 10px;
-            }
-
-            .logo-text {
-                font-size: 1.75rem;
-            }
-
-            .header-line {
-                height: 42px;
-            }
-
-            .header-copy-top {
-                font-size: 0.8rem;
-                margin-bottom: 2px;
-            }
-
-            .header-copy-bottom {
-                font-size: 1.05rem;
-            }
-
-            .header-call-btn {
-                width: 52px;
-                height: 52px;
-                min-width: 52px;
-            }
-
-            .header-call-btn svg {
-                width: 23px;
-                height: 23px;
-            }
-
-            .hero {
-                padding: 30px 18px 56px;
-            }
-
-            .event-pill {
-                font-size: 0.86rem;
-                padding: 10px 18px;
-                margin-bottom: 20px;
-            }
-
-            .sub-collab {
-                font-size: 1rem;
-                margin-bottom: 16px;
-            }
-
-            .point-char {
-                font-size: 4.4rem;
-            }
-
-            .rest-char {
-                font-size: 2.45rem;
-            }
-
-            .hero-subtext {
-                font-size: 1rem;
-                margin-top: 26px;
-                line-height: 1.7;
-            }
-
-            .hero-consult-wrap {
-                margin-top: 28px;
-            }
-
-            .hero-consult-desc {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
-
-            .hero-consult-card {
-                padding: 26px 18px;
-                border-radius: 24px;
-            }
-
-            .hero-consult-label {
-                font-size: 1rem;
-            }
-
-            .hero-consult-role {
-                font-size: 0.85rem;
-                margin-bottom: 10px;
-            }
-
-            .hero-consult-phone {
-                font-size: 2.2rem;
-                margin-bottom: 14px;
-            }
-
-            .hero-consult-name {
-                padding: 10px 18px;
-                font-size: 0.95rem;
-            }
-
-            .container {
-                padding: 48px 16px;
-            }
-
-            .section-title {
-                margin-bottom: 24px;
-            }
-
-            .section-title h2 {
-                font-size: 1.95rem;
-                line-height: 1.35;
-            }
-
-            .price-guide {
-                font-size: 0.92rem;
-                padding: 12px 16px;
-                margin-bottom: 22px;
-            }
-
-            .promo-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 14px;
-            }
-
-            .promo-card {
-                padding: 18px 12px 20px;
-                border-radius: 24px;
-            }
-
-            .promo-card h3 {
-                font-size: 1rem;
-                margin-bottom: 10px;
-            }
-
-            .promo-image {
-                height: 110px;
-                margin-bottom: 12px;
-            }
-
-            .promo-price {
-                font-size: 0.82rem;
-                margin-bottom: 6px;
-            }
-
-            .promo-sale {
-                font-size: 1rem;
-            }
-
-            .promo-card-text h3 {
-                font-size: 1.4rem;
-                margin-bottom: 14px;
-            }
-
-            .promo-text-box p {
-                font-size: 0.9rem;
-            }
-
-            .extra-benefits-section {
-                margin-top: 28px;
-            }
-
-            .extra-benefits-title {
-                font-size: 1.95rem;
-            }
-
-            .extra-benefits-sub {
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
-
-            .extra-benefit-card {
-                gap: 14px;
-                padding: 22px 18px;
-                border-radius: 24px;
-                margin-bottom: 14px;
-            }
-
-            .extra-benefit-icon {
-                width: 74px;
-                height: 74px;
-                min-width: 74px;
-                border-radius: 20px;
-            }
-
-            .extra-benefit-icon svg {
-                width: 34px;
-                height: 34px;
-            }
-
-            .extra-benefit-label {
-                font-size: 0.9rem;
-                margin-bottom: 6px;
-            }
-
-            .extra-benefit-card h3 {
-                font-size: 1.55rem;
-                margin-bottom: 8px;
-            }
-
-            .extra-benefit-card p {
-                font-size: 0.98rem;
-                line-height: 1.7;
-            }
-
-            .apply-section {
-                margin-top: 42px;
-                padding: 60px 16px;
-                border-radius: 40px 40px 0 0;
-            }
-
-            .apply-box {
-                padding: 36px 22px;
-                border-radius: 28px;
-            }
-
-            .floating-btn {
-                font-size: 0.9rem;
-                padding: 15px 12px;
-            }
+        .kids-benefit-item strong {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
         }
 
-        .extra-benefit-card.dark {
-            background: #fff0f6 !important;
-            border: 1px solid #ffe0ef !important;
-            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06) !important;
+        .kids-benefit-item span {
+            font-size: 0.82rem;
+            line-height: 1.4;
         }
 
-        .extra-benefit-card.dark .extra-benefit-icon {
-            background: #f8e8f1 !important;
-            color: var(--uplus-magenta) !important;
+        .benefit-extra-title {
+            font-size: 1.8rem;
+            margin-bottom: 14px;
         }
 
-        .extra-benefit-card.dark h3,
-        .extra-benefit-card.dark p {
-            color: #111111 !important;
+        .benefit-extra-desc {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
-        .extra-benefit-card.dark .extra-benefit-label {
-            color: var(--uplus-magenta) !important;
+        .benefit-card {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 24px 20px;
+            border-radius: 28px;
         }
 
-        .extra-benefit-card.dark .highlight {
-            color: var(--uplus-magenta) !important;
+        .benefit-icon-box {
+            width: 92px;
+            height: 92px;
+            min-width: 92px;
+            border-radius: 22px;
         }
-    </style>
+
+        .benefit-icon-box svg {
+            width: 42px;
+            height: 42px;
+        }
+
+        .benefit-label {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .benefit-heading {
+            font-size: 1.7rem;
+            margin-bottom: 12px;
+        }
+
+        .benefit-desc {
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .apply-section {
+            padding: 60px 16px;
+            border-radius: 38px 38px 0 0;
+        }
+
+        .apply-box {
+            padding: 34px 20px;
+            border-radius: 28px;
+        }
+
+        .faq-section {
+            padding: 64px 16px;
+        }
+
+        .faq-title {
+            font-size: 1.9rem;
+            margin-bottom: 30px;
+        }
+
+        .faq-question {
+            padding: 24px 20px;
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            padding: 0 20px 22px;
+            font-size: 0.95rem;
+        }
+    }
+</style>
 </head>
 <body>
 
