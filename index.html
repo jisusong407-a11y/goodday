@@ -624,7 +624,7 @@
         box-shadow: 0 6px 18px rgba(0,0,0,0.04);
     }
 
-    .faq-question {
+   .faq-question {
     width: 100%;
     background: #fff;
     border: none;
@@ -641,9 +641,22 @@
     position: relative;
 }
 
-.faq-question span {
+.faq-question > span:first-child {
     display: block;
     width: 100%;
+    text-align: center;
+}
+
+.faq-icon {
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #1a2238;
+    transition: transform 0.2s ease;
+    width: auto;
 }
 
 .faq-icon {
