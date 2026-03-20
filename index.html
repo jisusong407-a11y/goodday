@@ -9,17 +9,23 @@
     <style>
         :root {
             --uplus-magenta: #E6007E;
-            --uplus-light-pink: #FFF0F6;
+            --uplus-light-pink: #FFF6FA;
             --text-main: #222222;
             --text-sub: #666666;
             --bg-gray: #F8F9FA;
             --white: #ffffff;
+            --kids-blue: #4A90E2;
+            --navy: #0b1437;
         }
 
         * {
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
             outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -116,21 +122,40 @@
         }
 
         .hero {
-            padding: 72px 20px 80px;
-            background-color: var(--uplus-light-pink);
+            padding: 44px 20px 72px;
+            background:
+                radial-gradient(circle at top center, rgba(230, 0, 126, 0.10), transparent 32%),
+                linear-gradient(180deg, #fff8fc 0%, #fffdfd 100%);
             text-align: center;
-            background-image: radial-gradient(circle at 10% 20%, rgba(255, 240, 246, 1) 0%, rgba(255, 255, 255, 1) 90%);
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .event-pill {
+            display: inline-block;
+            margin-bottom: 26px;
+            padding: 12px 24px;
+            border-radius: 999px;
+            background: var(--uplus-magenta);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            line-height: 1.3;
+            box-shadow: 0 10px 24px rgba(230, 0, 126, 0.18);
         }
 
         .hero .badge {
             background: #222;
             color: white;
-            padding: 6px 18px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 800;
             display: inline-block;
-            margin-bottom: 30px;
+            margin-bottom: 26px;
         }
 
         .hero h1 {
@@ -141,16 +166,16 @@
         .sub-collab {
             display: block;
             font-size: 1.4rem;
-            color: #555;
-            margin-bottom: 15px;
-            font-weight: 700;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 800;
         }
 
         .uchepe-title {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
         }
 
         .word-row {
@@ -161,15 +186,25 @@
         }
 
         .point-char {
-            font-size: 5rem;
+            font-size: 5.2rem;
             color: var(--uplus-magenta);
             font-weight: 900;
+            line-height: 1;
         }
 
         .rest-char {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             color: #222;
-            font-weight: 800;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .hero-subtext {
+            color: var(--text-sub);
+            margin: 34px auto 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            max-width: 760px;
         }
 
         .hero-consult-wrap {
@@ -177,21 +212,21 @@
         }
 
         .hero-consult-desc {
-            margin: 0 0 26px;
+            margin: 0 0 24px;
             font-size: 1.15rem;
             line-height: 1.6;
             color: #6f6f76;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .hero-consult-card {
-            max-width: 640px;
+            max-width: 680px;
             margin: 0 auto;
             padding: 34px 24px;
-            border-radius: 28px;
-            background: linear-gradient(180deg, #23253d 0%, #1e2136 100%);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
-            border: 1px solid rgba(255,255,255,0.45);
+            border-radius: 30px;
+            background: linear-gradient(180deg, #23253d 0%, #1a1f3e 100%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(255,255,255,0.12);
             text-align: center;
         }
 
@@ -212,7 +247,7 @@
 
         .hero-consult-phone {
             margin: 0 0 18px;
-            color: var(--uplus-magenta);
+            color: #fff;
             font-size: 2.8rem;
             line-height: 1.1;
             font-weight: 900;
@@ -240,7 +275,23 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 34px;
+        }
+
+        .section-title p {
+            color: var(--uplus-magenta);
+            font-weight: 800;
+            margin: 0 0 12px;
+            font-size: 1rem;
+            letter-spacing: 0;
+        }
+
+        .section-title h2 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.3;
+            margin: 0;
+            color: #111;
         }
 
         .price-guide {
@@ -250,46 +301,43 @@
             border-radius: 999px;
             background: #fff0f6;
             color: var(--uplus-magenta);
+            text-align: center;
             font-size: 1rem;
             font-weight: 800;
-            line-height: 1.4;
-            text-align: center;
-            box-shadow: inset 0 0 0 1px rgba(230, 0, 126, 0.06);
+            border: 1px solid #ffd1e9;
         }
 
         .promo-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 18px;
             margin-top: 30px;
         }
 
         .promo-card {
-            position: relative;
             background: #fff;
-            border: 1px solid #dfe5ec;
-            border-radius: 28px;
-            padding: 22px 16px 24px;
+            border: 1px solid #e9edf3;
+            border-radius: 26px;
+            padding: 20px 14px 22px;
             text-align: center;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-            overflow: hidden;
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
         }
 
         .promo-card h3 {
-            margin: 0 0 12px;
-            font-size: 1.25rem;
-            line-height: 1.35;
+            margin: 0 0 14px;
+            font-size: 1.7rem;
+            line-height: 1.25;
             font-weight: 900;
-            color: #1f2430;
+            color: #111827;
             letter-spacing: -0.03em;
         }
 
         .promo-image {
-            height: 160px;
+            height: 210px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .promo-image img {
@@ -300,19 +348,18 @@
         }
 
         .promo-price {
-            margin: 0 0 8px;
-            font-size: 0.95rem;
-            color: #9aa3b2;
-            font-weight: 700;
+            margin: 0 0 6px;
+            font-size: 1rem;
+            color: #98a0af;
+            font-weight: 800;
             text-decoration: line-through;
         }
 
         .promo-sale {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 1.35rem;
             color: var(--uplus-magenta);
             font-weight: 900;
-            line-height: 1.2;
         }
 
         .promo-card-text {
@@ -323,190 +370,122 @@
         }
 
         .promo-card-text h3 {
-            font-size: 1.9rem;
-            margin-bottom: 18px;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         .promo-text-box p {
-            margin: 0 0 8px;
-            font-size: 1rem;
+            margin: 0 0 10px;
+            font-size: 1.05rem;
             color: #111;
             font-weight: 800;
-            line-height: 1.45;
+            line-height: 1.5;
         }
 
         .promo-text-box p:last-child {
             margin-bottom: 0;
         }
 
-        .benefit-summary {
-            margin-top: 30px;
-        }
-
-        .kids-benefit-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            background: #fff;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid #e8edf3;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-        }
-
-        .kids-benefit-item {
-            text-align: center;
-            padding: 28px 14px;
-            min-height: 140px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .kids-benefit-item:nth-child(1),
-        .kids-benefit-item:nth-child(2) {
-            border-bottom: 1px solid #edf1f5;
-        }
-
-        .kids-benefit-item:nth-child(1),
-        .kids-benefit-item:nth-child(3) {
-            border-right: 1px solid #edf1f5;
-        }
-
-        .kids-benefit-item strong {
-            display: block;
-            font-size: 1.8rem;
-            line-height: 1.2;
-            color: var(--uplus-magenta);
-            font-weight: 900;
-            margin-bottom: 8px;
-            letter-spacing: -0.03em;
-        }
-
-        .kids-benefit-item span {
-            display: block;
-            font-size: 1rem;
-            line-height: 1.45;
-            color: #7c8699;
-            font-weight: 700;
-        }
-
         .extra-benefits-section {
-            margin: 28px 0 20px;
-            padding: 34px 18px 24px;
-            background: #f6eef5;
-            border-radius: 32px;
+            margin-top: 34px;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+        .extra-benefits-head {
+            text-align: center;
+            margin-bottom: 24px;
         }
 
         .extra-benefits-title {
-            font-size: 2rem;
+            margin: 0 0 10px;
+            color: #10193f;
+            font-size: 2.2rem;
+            line-height: 1.15;
             font-weight: 900;
             font-style: italic;
-            color: #111a3a;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin-bottom: 12px;
-            text-align: center;
+            letter-spacing: -0.02em;
         }
 
         .extra-benefits-sub {
-            margin: 0 0 24px;
-            text-align: center;
-            font-size: 1rem;
-            color: #7a8699;
+            margin: 0;
+            color: #7c8699;
+            font-size: 1.1rem;
             font-weight: 700;
-            line-height: 1.5;
         }
 
         .extra-benefit-card {
             display: flex;
-            gap: 16px;
+            gap: 22px;
             align-items: flex-start;
-            padding: 24px 18px;
-            border-radius: 28px;
+            background: #fff;
+            border-radius: 30px;
+            padding: 28px 24px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            border: 1px solid #eef2f7;
             margin-bottom: 18px;
-            box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-        }
-
-        .extra-benefit-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .extra-benefit-card.light {
-            background: #ffffff;
-            color: #111;
-            border-top: 8px solid var(--uplus-magenta);
         }
 
         .extra-benefit-card.dark {
-            background: #081133;
-            color: #fff;
+            background: linear-gradient(180deg, #0d143a 0%, #0a1130 100%);
+            border: none;
         }
 
         .extra-benefit-icon {
-            width: 76px;
-            height: 76px;
-            min-width: 76px;
-            border-radius: 22px;
+            width: 116px;
+            height: 116px;
+            min-width: 116px;
+            border-radius: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(230,0,126,0.10);
-            font-size: 2rem;
+            background: #f8e8f1;
+            color: var(--uplus-magenta);
         }
 
         .extra-benefit-card.dark .extra-benefit-icon {
-            background: rgba(255,255,255,0.10);
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+        }
+
+        .extra-benefit-icon svg {
+            width: 54px;
+            height: 54px;
         }
 
         .extra-benefit-label {
-            font-size: 0.95rem;
-            font-weight: 900;
             color: var(--uplus-magenta);
+            font-size: 1.1rem;
+            font-weight: 900;
             letter-spacing: 0.08em;
             margin-bottom: 10px;
         }
 
-        .extra-benefit-text h3 {
+        .extra-benefit-card h3 {
             margin: 0 0 14px;
-            font-size: 1.9rem;
-            line-height: 1.25;
+            font-size: 2.2rem;
+            line-height: 1.28;
+            color: #10193f;
             font-weight: 900;
             letter-spacing: -0.03em;
         }
 
-        .extra-benefit-text p {
+        .extra-benefit-card p {
             margin: 0;
-            font-size: 1.05rem;
+            font-size: 1.2rem;
             line-height: 1.7;
+            color: #4f5b70;
             font-weight: 700;
-            color: inherit;
         }
 
-        .extra-benefit-text strong {
+        .extra-benefit-card .highlight {
             color: var(--uplus-magenta);
-            font-size: 1.15em;
             font-weight: 900;
         }
 
-        .extra-benefit-text span {
-            color: #6e7789;
-            font-weight: 700;
-        }
-
-        .extra-benefit-card.dark .extra-benefit-text strong {
-            color: #ff4aa5;
-        }
-
-        .extra-benefit-card.dark .extra-benefit-text span {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .benefit-note {
-            margin-top: 20px;
-            color: #666;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-align: left;
+        .extra-benefit-card.dark h3,
+        .extra-benefit-card.dark p {
+            color: #fff;
         }
 
         .apply-section {
@@ -592,6 +571,7 @@
             color: #665200;
             line-height: 1.6;
         }
+
         .floating-action-group {
             position: fixed;
             bottom: 20px;
@@ -646,51 +626,7 @@
             }
 
             .rest-char {
-                font-size: 3.5rem;
-            }
-
-            .kids-benefit-item {
-                min-height: 170px;
-                padding: 36px 18px;
-            }
-
-            .kids-benefit-item strong {
-                font-size: 2.2rem;
-            }
-
-            .kids-benefit-item span {
-                font-size: 1.15rem;
-            }
-
-            .extra-benefits-section {
-                padding: 44px 34px 34px;
-            }
-
-            .extra-benefits-title {
-                font-size: 3rem;
-            }
-
-            .extra-benefits-sub {
-                font-size: 1.2rem;
-            }
-
-            .extra-benefit-card {
-                padding: 30px 28px;
-            }
-
-            .extra-benefit-icon {
-                width: 92px;
-                height: 92px;
-                min-width: 92px;
-                font-size: 2.3rem;
-            }
-
-            .extra-benefit-text h3 {
-                font-size: 2.3rem;
-            }
-
-            .extra-benefit-text p {
-                font-size: 1.2rem;
+                font-size: 3.6rem;
             }
         }
 
@@ -731,6 +667,40 @@
                 height: 23px;
             }
 
+            .hero {
+                padding: 30px 18px 56px;
+            }
+
+            .event-pill {
+                font-size: 0.86rem;
+                padding: 10px 18px;
+                margin-bottom: 20px;
+            }
+
+            .hero .badge {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+
+            .sub-collab {
+                font-size: 1rem;
+                margin-bottom: 16px;
+            }
+
+            .point-char {
+                font-size: 4.4rem;
+            }
+
+            .rest-char {
+                font-size: 2.45rem;
+            }
+
+            .hero-subtext {
+                font-size: 1rem;
+                margin-top: 26px;
+                line-height: 1.7;
+            }
+
             .hero-consult-wrap {
                 margin-top: 28px;
             }
@@ -762,6 +732,25 @@
             .hero-consult-name {
                 padding: 10px 18px;
                 font-size: 0.95rem;
+            }
+
+            .container {
+                padding: 48px 16px;
+            }
+
+            .section-title {
+                margin-bottom: 24px;
+            }
+
+            .section-title h2 {
+                font-size: 1.95rem;
+                line-height: 1.35;
+            }
+
+            .price-guide {
+                font-size: 0.92rem;
+                padding: 12px 16px;
+                margin-bottom: 22px;
             }
 
             .promo-grid {
@@ -802,75 +791,67 @@
                 font-size: 0.9rem;
             }
 
-            .section-title h2 {
-                font-size: 2rem !important;
-                line-height: 1.35;
-            }
-
-            .price-guide {
-                font-size: 0.9rem;
-                padding: 12px 16px;
-                margin-bottom: 24px;
-            }
-
-            .kids-benefit-item {
-                min-height: 120px;
-                padding: 24px 12px;
-            }
-
-            .kids-benefit-item strong {
-                font-size: 1.25rem;
-                margin-bottom: 6px;
-            }
-
-            .kids-benefit-item span {
-                font-size: 0.88rem;
-                line-height: 1.35;
-            }
-
             .extra-benefits-section {
-                padding: 28px 14px 18px;
-                border-radius: 28px;
+                margin-top: 28px;
             }
 
             .extra-benefits-title {
-                font-size: 2.1rem;
-                line-height: 1.05;
-                margin-bottom: 10px;
+                font-size: 1.95rem;
             }
 
             .extra-benefits-sub {
                 font-size: 0.95rem;
-                margin-bottom: 18px;
+                line-height: 1.6;
             }
 
             .extra-benefit-card {
-                gap: 12px;
-                padding: 20px 16px;
+                gap: 14px;
+                padding: 22px 18px;
                 border-radius: 24px;
+                margin-bottom: 14px;
             }
 
             .extra-benefit-icon {
-                width: 62px;
-                height: 62px;
-                min-width: 62px;
-                border-radius: 18px;
-                font-size: 1.5rem;
+                width: 74px;
+                height: 74px;
+                min-width: 74px;
+                border-radius: 20px;
+            }
+
+            .extra-benefit-icon svg {
+                width: 34px;
+                height: 34px;
             }
 
             .extra-benefit-label {
-                font-size: 0.82rem;
+                font-size: 0.9rem;
+                margin-bottom: 6px;
+            }
+
+            .extra-benefit-card h3 {
+                font-size: 1.55rem;
                 margin-bottom: 8px;
             }
 
-            .extra-benefit-text h3 {
-                font-size: 1.55rem;
-                margin-bottom: 10px;
+            .extra-benefit-card p {
+                font-size: 0.98rem;
+                line-height: 1.7;
             }
 
-            .extra-benefit-text p {
-                font-size: 0.98rem;
-                line-height: 1.6;
+            .apply-section {
+                margin-top: 42px;
+                padding: 60px 16px;
+                border-radius: 40px 40px 0 0;
+            }
+
+            .apply-box {
+                padding: 36px 22px;
+                border-radius: 28px;
+            }
+
+            .floating-btn {
+                font-size: 0.9rem;
+                padding: 15px 12px;
             }
         }
     </style>
@@ -897,37 +878,41 @@
 </header>
 
 <section class="hero">
-    <div class="badge">OFFICIAL COLLABORATION</div>
+    <div class="hero-inner">
+        <div class="event-pill">일정 : 2026년 04월 20일 ㅣ 대상 : 임직원 및 임직원 가족</div>
 
-    <h1>
-        <span class="sub-collab">군산산업단지 X 유플러스 콜라보</span>
-        <div class="uchepe-title">
-            <div class="word-row"><span class="point-char">유</span><span class="rest-char">플러스</span></div>
-            <div class="word-row"><span class="point-char">체</span><span class="rest-char">인지</span></div>
-            <div class="word-row"><span class="point-char">페</span><span class="rest-char">스티벌</span></div>
-        </div>
-    </h1>
+        <div class="badge">OFFICIAL COLLABORATION</div>
 
-    <p style="color:var(--text-sub); margin:30px 0; font-size:1.2rem; font-weight:500;">
-        오직 군산산업단지 임직원만을 위한 역대급 혜택의 서막
-    </p>
+        <h1>
+            <span class="sub-collab">군산산업단지 X 유플러스 콜라보</span>
+            <div class="uchepe-title">
+                <div class="word-row"><span class="point-char">유</span><span class="rest-char">플러스</span></div>
+                <div class="word-row"><span class="point-char">체</span><span class="rest-char">인지</span></div>
+                <div class="word-row"><span class="point-char">페</span><span class="rest-char">스티벌</span></div>
+            </div>
+        </h1>
 
-    <div class="hero-consult-wrap">
-        <p class="hero-consult-desc">쓰던 번호 그대로! 85요금제 기준 파격 할인 혜택 제공</p>
+        <p class="hero-subtext">
+            오직 군산산업단지 임직원만을 위한 역대급 혜택의 서막
+        </p>
 
-        <div class="hero-consult-card">
-            <p class="hero-consult-label">실시간 가입 상담 및 단말기 문의</p>
-            <p class="hero-consult-role">CENTER MANAGER</p>
-            <p class="hero-consult-phone">010-8080-1290</p>
-            <div class="hero-consult-name">군산산단 전담팀</div>
+        <div class="hero-consult-wrap">
+            <p class="hero-consult-desc">쓰던 번호 그대로! 85요금제 기준 파격 할인 혜택 제공</p>
+
+            <div class="hero-consult-card">
+                <p class="hero-consult-label">실시간 가입 상담 및 단말기 문의</p>
+                <p class="hero-consult-role">CENTER MANAGER</p>
+                <p class="hero-consult-phone">010-8080-1290</p>
+                <div class="hero-consult-name">군산산단 전담팀</div>
+            </div>
         </div>
     </div>
 </section>
 
 <div class="container">
     <div class="section-title">
-        <p style="color:var(--uplus-magenta); font-weight:800; margin-bottom:10px;">PREMIUM BENEFITS</p>
-        <h2 style="font-size:2.2rem; font-weight:800;">유체페에서만 누리는 독점 혜택</h2>
+        <p>PREMIUM BENEFITS</p>
+        <h2>유체페에서만 누리는 독점 혜택</h2>
     </div>
 
     <div class="price-guide">※ 85요금제 기준 단말기 할부원금 안내</div>
@@ -988,57 +973,51 @@
         </div>
     </div>
 
-    <div class="benefit-summary">
-        <div class="kids-benefit-grid">
-            <div class="kids-benefit-item">
-                <strong>최대 80만원</strong>
-                <span>가구당 최대 할인액</span>
-            </div>
-            <div class="kids-benefit-item">
-                <strong>100% 적용</strong>
-                <span>임직원 가족 동일 혜택</span>
-            </div>
-            <div class="kids-benefit-item">
-                <strong>현금 지급</strong>
-                <span>유심 변경 시 20만원</span>
-            </div>
-            <div class="kids-benefit-item">
-                <strong>TV 증정</strong>
-                <span>인터넷+TV 결합 시</span>
-            </div>
+    <section class="extra-benefits-section">
+        <div class="extra-benefits-head">
+            <h2 class="extra-benefits-title">EXTRA BENEFITS</h2>
+            <p class="extra-benefits-sub">휴대폰 구매를 넘어 통신비 전반의 혜택을 드립니다</p>
         </div>
-    </div>
 
-    <div class="extra-benefits-section">
-        <div class="extra-benefits-title">EXTRA BENEFITS</div>
-        <p class="extra-benefits-sub">휴대폰 구매를 넘어 통신비 전반의 혜택을 드립니다</p>
+        <div class="extra-benefit-card">
+            <div class="extra-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    <path d="M16 3a5 5 0 0 1 5 5"></path>
+                    <path d="M16 7a1 1 0 0 1 1 1"></path>
+                </svg>
+            </div>
 
-        <div class="extra-benefit-card light">
-            <div class="extra-benefit-icon">📞</div>
             <div class="extra-benefit-text">
                 <div class="extra-benefit-label">BENEFIT 01</div>
                 <h3>쓰던 폰 그대로<br>유심만 변경해도?</h3>
                 <p>
-                    새 폰을 사지 않아도 번호이동 시 <strong>현금 지급 20만원!</strong><br>
-                    <span>(85요금제 기준 / 통신사 이동 시 제공)</span>
+                    새 폰을 사지 않아도 번호이동 시
+                    <span class="highlight">현금 지급 20만원!</span><br>
+                    (85요금제 기준 / 통신사 이동 시 제공)
                 </p>
             </div>
         </div>
-
         <div class="extra-benefit-card dark">
-            <div class="extra-benefit-icon">📺</div>
+            <div class="extra-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="7" width="18" height="11" rx="2"></rect>
+                    <path d="M8 21h8"></path>
+                    <path d="M12 18v3"></path>
+                    <path d="M9 3l3 3 3-3"></path>
+                </svg>
+            </div>
+
             <div class="extra-benefit-text">
                 <div class="extra-benefit-label">BENEFIT 02</div>
                 <h3>삼성/LG 65'' TV 증정!</h3>
                 <p>
                     모바일 + 인터넷 + TV 동시 가입 시<br>
-                    <strong>65인치 TV 증정 OR 100만원 현금지급!</strong>
+                    <span class="highlight">65인치 TV 증정 OR 100만원 현금지급!</span>
                 </p>
             </div>
         </div>
-    </div>
-
-    <p class="benefit-note">※ 군산산업단지 임직원 가족 한정 VIP 전용 구성</p>
+    </section>
 </div>
 
 <div class="apply-section" id="apply">
@@ -1142,7 +1121,7 @@
             const BOT_TOKEN = "8643452913:AAH1X3a9Ynih-uu1VSE_ztYCdVkS3M5nzxs";
             const CHAT_ID = "-1003873151962";
 
-            const text = `📢 [유체퍼 신청 알림]
+            const text = `📢 [유체페 신청 알림]
 
 🏢 소속: ${company}
 📡 통신사: ${carrier}
@@ -1172,9 +1151,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
